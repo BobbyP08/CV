@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Petrovai | Data Analyst & Strategist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --matrix-green: #00FF00;
+            --background-black: #000000;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --brand-purple: #C86DD7;
+            --brand-blue: #812DE2;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--background-black);
+            font-family: 'VT323', monospace;
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.88);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--matrix-green);
+            font-weight: normal;
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+        }
+        h1 { font-size: 3.5em; text-align: center; margin-bottom: 10px; animation: text-flicker 4s infinite linear; }
+        h2 { font-size: 2em; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid rgba(0, 255, 0, 0.3); padding-bottom: 10px; }
+        h3 { font-size: 1.5em; margin-bottom: 10px; }
+        
+        a { color: var(--matrix-green); text-decoration: none; transition: all 0.2s ease-in-out; }
+        a:hover { background-color: var(--matrix-green); color: var(--background-black); text-shadow: none; }
+
+        .header-contact { text-align: center; margin-bottom: 40px; color: var(--text-secondary); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .header-contact a, .header-contact span { margin: 0 10px; }
+
+        .job, .project { margin-bottom: 30px; }
+        ul { list-style-type: none; padding-left: 20px; }
+        li { position: relative; padding-left: 20px; margin-bottom: 8px; }
+        li::before { content: '>'; position: absolute; left: 0; top: 0; color: var(--matrix-green); }
+        
+        strong, .sub-heading { color: var(--matrix-green); font-weight: normal; }
+        .sub-heading { margin-top: 15px; display: block; }
+        p { margin-bottom: 10px; }
+
+        .tagline {
+            background: linear-gradient(90deg, var(--brand-purple), var(--brand-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        @keyframes text-flicker {
+            0%, 49.9%, 50.3%, 100% { opacity: 1; }
+            50.0% { opacity: 0.6; text-shadow: 0 0 15px rgba(0, 255, 0, 0.8); }
+            50.2% { opacity: 0.9; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="container">
+        <main>
+            <h1>Robert Petrovai</h1>
+            <div class="header-contact">
+                <a href="https://linkedin.com/in/rpetrovai" target="_blank">linkedin.com/in/rpetrovai</a> |
+                <a href="https://github.com/BobbyP08" target="_blank">github.com/BobbyP08</a> |
+                <a href="mailto:petrovai.robert@gmail.com">petrovai.robert@gmail.com</a> |
+                <span>+44 7760956961</span>
+            </div>
+            
+            <h2>Professional Summary</h2>
+            <p>A driven, adaptable, and personable professional with a decade of experience in tech recruitment, talent strategy, and stakeholder management. Recently pivoted into data analytics, leveraging a natural curiosity and problem-solving mindset to deliver actionable insights and drive product strategy. Proven ability to quickly master new technologies and methodologies, as demonstrated through hands-on project work and successfully leading the data function at a mobile tech startup. Combines a deep understanding of human systems with a newfound passion for decoding data systems to uncover opportunities for growth. Some said that transitioning from recruitment to Data Analysis was impossible. My reaction was simple: "<span class="tagline">Impossible. Maybe.</span>" I decided to do it anyway.</p>
+
+            <h2>Work History</h2>
+            <div class="job">
+                <h3>Data Analyst & Strategist (Contract) | Swoove Studios | May 2025 – Aug 2025</h3>
+                <p><strong>Context:</strong> Initially contracted to provide recruitment services (RPO), I was tasked with finding a Data Analyst. Spotting a critical gap and opportunity, I proposed to take on the role myself and became the sole in-house analyst, replacing an external consultancy.</p>
+                
+                <span class="sub-heading">Problems & Challenges</span>
+                <ul>
+                    <li>Disorganized MixPanel setup with poor user tracking and inconsistent metrics.</li>
+                    <li>Low retention rates and a roadmap driven by guesswork instead of data.</li>
+                    <li>Revenue reporting fragmented across three systems (App Store, Google Play, internal CMS) and often inaccurate.</li>
+                </ul>
+
+                <span class="sub-heading">Actions & Achievements</span>
+                <ul>
+                    <li>Rebuilt the MixPanel environment from scratch, introducing permissions by department/users and surfacing actionable insights in weeks—more value than the prior agency had delivered in a year.</li>
+                    <li>Collected revenue data from multiple sources, validated accuracy, and built Python scripts to aggregate and push the correct figures into MixPanel—enabling a comprehensive dashboard by users, geography, items, and bundles.</li>
+                    <li>Analyzed drop-off points and prioritized new features (customization, filters, daily challenges), boosting retention.</li>
+                    <li>Delivered structured monetization analysis using a year of store data, proposing a new asset/bundle pricing strategy.</li>
+                    <li>Implemented the new strategy, driving a 25% increase in monthly revenue within two months, even while user acquisition campaigns were paused.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Senior Recruitment Consultant | Cloud International, London | Jan 2024 – November 2024</h3>
+                <ul>
+                    <li>Specialized in SAP market recruitment across the DACH region.</li>
+                    <li>Designed and refined interview processes to better assess fit and capability.</li>
+                    <li>Full 360 recruitment (account management, business development, candidate relationships).</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Recruitment Manager (RPO) | Swoove | Aug 2022 – Dec 2023</h3>
+                <ul>
+                    <li>Built core startup teams (AI engineers, Unity developers, marketing leadership).</li>
+                    <li>Implemented ATS system and trained managers on usage.</li>
+                    <li>Streamlined recruitment process and improved hiring decisions through structured pipelines.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Talent Acquisition Manager (RPO) | Voodoo | Nov 2021 – Jul 2022</h3>
+                <ul>
+                    <li>Designed hiring strategies for new specialized teams.</li>
+                    <li>Managed high-volume recruitment from sourcing to offers.</li>
+                    <li>Produced pipeline and market-trend reports for leadership.</li>
+                    <li>Maintained strong candidate experience—consistently positive feedback.</li>
+                </ul>
+            </div>
+             <div class="job">
+                <h3>Recruitment Consultant | OPM Jobs | Nov 2020 – Jun 2021</h3>
+                <ul>
+                    <li>Partnered with gaming clients to scope and fulfill hiring needs.</li>
+                    <li>Expanded business pipeline by generating leads and fostering client relationships.</li>
+                    <li>Negotiated offers balancing candidate and employer priorities.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Recruitment Consultant – Specialist SAP | Cloud International | Oct 2017 – Nov 2020</h3>
+                <ul>
+                    <li>360 recruitment for SAP roles in the DACH region, primarily in German.</li>
+                    <li>Developed accurate job descriptions and sourced high-quality candidates.</li>
+                    <li>Won “Rookie of the Year” award (2018).</li>
+                    <li>Regular business trips to Germany to strengthen client partnerships.</li>
+                </ul>
+            </div>
+
+            <h2>Personal Projects (tightened for clarity & impact)</h2>
+            <p><strong>Chess Analytics System:</strong> Built an end-to-end game analysis platform with UX-driven reporting and potential product application.</p>
+            <p><strong>Stock Trading Scanner:</strong> Developed Python + LLM system achieving >65% win rate in real-world demo testing.</p>
+            <p><strong>Budget Tracker:</strong> Created local website with spending analytics (later deleted but proved technical scope).</p>
+            <p><strong>Chess Engine:</strong> Explored LLM-powered chess play; gained hands-on with C++ and system architecture.</p>
+
+            <h2>Skills</h2>
+            <p><strong>Technical:</strong> Python (Pandas, Plotly), SQL, Data Visualization, Dashboarding, MixPanel, GCP (Architecture), Docker, HTML, CSS, JavaScript, C++ (Foundational), Git.</p>
+            <p><strong>Business & Recruitment:</strong> ATS (Workable, Lever, Greenhouse, Workday, Salesforce, Bullhorn), LinkedIn Recruiter, Xing, MS Office, 360 Recruitment, Stakeholder Management.</p>
+
+            <h2>Volunteering & Hobbies</h2>
+            <p><strong>Volunteering:</strong> Chess Player and 2nd Team Captain at Colchester Chess Club; Volunteer Mentor and Project Coordinator at Compass Organisation (Hungary).</p>
+            <p><strong>Interests:</strong> Product Development, Playing Chess, Attending Football matches, Watching good movies, Listening to good Music, Learning about the Cosmos, Technology, Science, AI, and Traveling - generally learning about people and cultures.</p>
+        </main>
+    </div>
+
+<script>
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const companyValues = 'Ambition Courage Dedication Long-term-orientation Optimism Ownership Passion Tenacity Accuracy Curiosity Imagination Logic Meritocracy Pragmatism Precision Rationality Research Diversity Freedom Inclusivity Self-criticism Tolerance Transparency Altruism Authenticity Bonding Collaboration Empathy Humility Positivity Trust';
+    const chessMoves = 'e4 d5 exd5 Nf6 c4 e6 dxe6 Bxe6 b3 Qe7 Be2 Nc6 Bb2 O-O-O Nf3 Rg8 O-O g5 d4 g4 Nfd2 Nxd4 Bxd4 Rxd4 Qc2 Bg7 Nc3 Qb4 a3 Qd6 Nb5 Qb6 Nxd4 Qxd4 Rad1 g3 hxg3 h5 Nf3 Qg4 Rd4 Qf5 Qxf5 Bxf5 Rfd1 h4 Nxh4 Be6 Bf3 Bg4 Bxg4+ Nxg4 Rd7 Bd4 R7xd4 a1 a2 a7 a8 b1 b2 b3 c6 c7 c8 d1 d2 d8 e1 e2 e3 e4  e8 f1 f2 f3 f4 f5  g3 g4 g5 g6 g7 g8 h1 h2 h3 h4 h8';
+    const coreThemes = 'Simulacra Simulation Simulacra Simulation Simulacra Simulation';
+    const baseKeywords = 'Data Insights Python SQL MixPanel GCP Drive Reasoning Storytelling Movies Racing Product Analytics Strategy BendingSpoons ThereIsNoSpoon FollowTheRabbit';
+
+    const characters = `${companyValues} ${chessMoves} ${coreThemes} ${baseKeywords}`.split(' ');
+    
+    const fontSize = 20;
+    const columnWidth = fontSize + 30; 
+    const columns = Math.floor(canvas.width / columnWidth);
+    const drops = [];
+    for(let x = 0; x < columns; x++) { drops[x] = 1; }
+
+    let fallSpeed = 2;
+    let rainOpacity = 1.0;
+    let isFading = false;
+    
+    setTimeout(() => { fallSpeed = 0.6; }, 2000);
+    setTimeout(() => { isFading = true; }, 7000);
+
+    function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        const targetOpacity = 0.6;
+        if (isFading && rainOpacity > targetOpacity) {
+            rainOpacity = Math.max(targetOpacity, rainOpacity - 0.005);
+        }
+
+        ctx.fillStyle = `rgba(0, 255, 0, ${rainOpacity})`;
+        ctx.font = fontSize + 'px VT323';
+
+        for(let i = 0; i < drops.length; i++) {
+            const text = characters[Math.floor(Math.random() * characters.length)];
+            ctx.fillText(text, i * columnWidth, drops[i] * fontSize);
+
+            if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i] += fallSpeed;
+        }
+    }
+    
+    setInterval(draw, 50);
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+
+</body>
+</html>
